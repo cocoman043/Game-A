@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://bukndv81olxpb"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_yncnb"]
+[ext_resource type="Texture2D" uid="uid://vf54gjewf55q" path="res://rei_01.png" id="2_ntmul"]
+[ext_resource type="Theme" uid="uid://dp84c2hk6ln7e" path="res://Default.tres" id="3_wq61e"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yncnb")
+
+[node name="Rei01" type="Sprite2D" parent="."]
+position = Vector2(320, 176)
+scale = Vector2(0.347685, 0.347685)
+texture = ExtResource("2_ntmul")
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -277.0
+offset_top = -68.0
+offset_right = -163.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_wq61e")
+text = "Play"
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -277.0
+offset_top = -9.0
+offset_right = -163.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_wq61e")
+text = "Settings"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -277.0
+offset_top = 50.0
+offset_right = -163.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_wq61e")
+text = "Exit"
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
